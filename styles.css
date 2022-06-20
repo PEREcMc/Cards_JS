@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background:	#435669;
+  height: 100vh;   /* body - 100% пространства */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  height: 85vh; /* 80% от видимой части экрана */
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;  /* позиционирование картинки */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative; /* для позиционирование наименования и изображения */
+
+  transition: all 500ms ease-in-out;
+}
+
+.slide h3 {
+
+  position: absolute;  /* для позиционирование наименования и изображения */
+  font-size: 24px;
+  bottom: 20px;
+  left: 20px;
+  margin: 0%;
+  opacity: 0;  /* для дальнейшей анимации заголовков */
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.5s;  /* анимация текста */
+  
+}
